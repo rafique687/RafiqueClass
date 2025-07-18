@@ -3,5 +3,13 @@
 
     // Add keyup event listener
     textarea.addEventListener('keyup', function() {
-      output.textContent = textarea.value;
+      var rev;
+      if(textarea.value.length >0)
+      {
+      for(let v = textarea.value.length; v >= 0 ;v--)
+      { rev = rev + textarea.value[v];
+       output.textContent = rev;
+    
+      }
+    }
     });
